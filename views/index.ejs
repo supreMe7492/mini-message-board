@@ -1,12 +1,20 @@
 <html>
 <head>
-  <title> main page </head>
+  <title> main page </title>
 </head>
 <body>
 <% for(let i=0; i<messages.length; i++){%>
 
-<div>
-   <%=messages[i].text%>
+<div class="container">
+  <span class="user">
+    <%=messages[i].user%>:
+  </span>
+  <span class="text">
+    <%=messages[i].text%>
+  </span>
+  <span class="date">
+   <%=messages[i].added.toDateString()%>
+  </span>
 </div>
 
 
