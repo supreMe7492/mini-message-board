@@ -4,10 +4,11 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<button type = 'button'> <a href="/new"> new post </a> </button>
+<div class="textsContainer">
+<button class="button" type = 'button'> <a href="/new"> new post </a> </button>
 <% for(let i=0; i<messages.length; i++){%>
 
-<div class="container">
+<div class="details">
   <span class="user">
     <%=messages[i].user%>:
   </span>
@@ -15,12 +16,12 @@
     <%=messages[i].text%>
   </span>
   <span class="date">
-   <%=messages[i].added.toDateString()%>
+  - <%=messages[i].added.toDateString()%>
   </span>
 </div>
 
 
 <%}%> 
- 
+ </div>
 </body>
 </html>
